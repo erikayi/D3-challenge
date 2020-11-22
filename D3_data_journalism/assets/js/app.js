@@ -1,5 +1,3 @@
-// @TODO: YOUR CODE HERE!
-
 // Load data from data.csv
 d3.csv("assets/data/data.csv").then(function (data) {
 
@@ -36,9 +34,7 @@ d3.csv("assets/data/data.csv").then(function (data) {
         console.log("Income Level: ", data.income);
     })
 
-    /////////////////////////////////////////////////////////////////////////////////
-    ///////////////////// poverty vs healthcare plot goes here //////////////////////
-    /////////////////////////////////////////////////////////////////////////////////
+    // ========================== create chart =======================================
 
     // set the dimensions and margins of the graph
     var margin = { top: 10, right: 50, bottom: 40, left: 50 },
@@ -66,7 +62,9 @@ d3.csv("assets/data/data.csv").then(function (data) {
         .style("fill", "EBEBEB")
         .style("opacity", 0.7)
 
-
+  
+    //================ poverty vs healthcare plot goes here ======================
+   
     // Add X axis
     var x = d3.scaleLinear()
         .domain([0, d3.max(data, data => data.poverty)])
@@ -144,29 +142,30 @@ d3.csv("assets/data/data.csv").then(function (data) {
     // chartGroup.append("g")
     //           .call(y);
 
+    
     // Create circle labels
     var circlesGroup = svg.selectAll("Circle")
-        .data(data)
-        .enter()
-        .append("circle")
-        .attr("cx", d => x(d.poverty))
-        .attr("cy", d => y(d.healthcare))
-        .attr("r", "15")
-        .attr("fill", "blue")
-        .attr("opacity", "0.5");
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", d => x(d.poverty))
+                            .attr("cy", d => y(d.healthcare))
+                            .attr("r", "15")
+                            .attr("fill", "blue")
+                            .attr("opacity", "0.5");
 
     var circleLabels = svg.selectAll(null)
-        .data(data)
-        .enter()
-        .append("text");
+                            .data(data)
+                            .enter()
+                            .append("text");
 
     circleLabels.attr("x", d => x(d.poverty))
-        .attr("y", d => y(d.healthcare))
-        .text(d => d.abbr)
-        .attr("font-family", "sans-serif")
-        .attr("font-size", "10px")
-        .attr("text-anchor", "middle")
-        .attr("fill", "white");
+                .attr("y", d => y(d.healthcare))
+                .text(d => d.abbr)
+                .attr("font-family", "sans-serif")
+                .attr("font-size", "10px")
+                .attr("text-anchor", "middle")
+                .attr("fill", "white");
 
 
     // We do not need labels twice.
@@ -177,31 +176,26 @@ d3.csv("assets/data/data.csv").then(function (data) {
     //           .attr("class", "axisText")
     //           .text("In Poverty (%)");
 
-    //////////////////////////////////////////////////////////////////////////////////
-    ///////////////////// poverty vs healthcare plot ends here ///////////////////////
-    //////////////////////////////////////////////////////////////////////////////////
 
-    //////////////////////////////////////////////////////////////////////////////////
-    ///////////////////// age (median) vs Smokes (%) start here //////////////////////
-    //////////////////////////////////////////////////////////////////////////////////
- 
+    //=================== age (median) vs Smokes (%) start here ======================
+
     // Add X axis
     var x = d3.scaleLinear()
-        .domain([0, d3.max(data, data => data.age)])
-        .range([0, width])
-    svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).tickSize(-height * 1.3).ticks(8))
-        .select(".domain").remove()
+                .domain([0, d3.max(data, data => data.age)])
+                .range([0, width])
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x).tickSize(-height * 1.3).ticks(8))
+                .select(".domain").remove()
 
     // Add Y axis
     var y = d3.scaleLinear()
-        .domain([0, d3.max(data, data => data.smokes)])
-        .range([height, 0])
-        .nice()
-    svg.append("g")
-        .call(d3.axisLeft(y).tickSize(-width * 1.3).ticks(12))
-        .select(".domain").remove()
+                .domain([0, d3.max(data, data => data.smokes)])
+                .range([height, 0])
+                .nice()
+            svg.append("g")
+                .call(d3.axisLeft(y).tickSize(-width * 1.3).ticks(12))
+                .select(".domain").remove()
 
     // Customization
     svg.selectAll(".tick line").attr("stroke", "white")
@@ -221,27 +215,26 @@ d3.csv("assets/data/data.csv").then(function (data) {
         .attr("x", -margin.top - height / 2 + 85)
         .text("Smoke (%)")
 
-    //////////////////////////////////////////////////////////////////////////////////
-    //////////////////// household income vs Obese (%) start here ////////////////////
-    //////////////////////////////////////////////////////////////////////////////////
+
+    //================= household income vs Obese (%) start here =====================
 
     // Add X axis
     var x = d3.scaleLinear()
-        .domain([0, d3.max(data, data => data.income)])
-        .range([0, width])
-    svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).tickSize(-height * 1.3).ticks(8))
-        .select(".domain").remove()
+                .domain([0, d3.max(data, data => data.income)])
+                .range([0, width])
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x).tickSize(-height * 1.3).ticks(8))
+                .select(".domain").remove()
 
     // Add Y axis
     var y = d3.scaleLinear()
-        .domain([0, d3.max(data, data => data.obesity)])
-        .range([height, 0])
-        .nice()
-    svg.append("g")
-        .call(d3.axisLeft(y).tickSize(-width * 1.3).ticks(12))
-        .select(".domain").remove()
+                .domain([0, d3.max(data, data => data.obesity)])
+                .range([height, 0])
+                .nice()
+            svg.append("g")
+                .call(d3.axisLeft(y).tickSize(-width * 1.3).ticks(12))
+                .select(".domain").remove()
 
     // Customization
     svg.selectAll(".tick line").attr("stroke", "white")
@@ -260,12 +253,6 @@ d3.csv("assets/data/data.csv").then(function (data) {
         .attr("y", -margin.left + 20)
         .attr("x", -margin.top - height / 2 + 190)
         .text("Obese (%)")
-
-    //////////////////////////////////////////////////////////////////////////////////
-    //////////////////// household income vs Obese (%) ends here /////////////////////
-    //////////////////////////////////////////////////////////////////////////////////
-
-    // x-axis label animation
 
 
 })
