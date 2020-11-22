@@ -144,7 +144,7 @@ d3.csv("assets/data/data.csv").then(function (data) {
     // chartGroup.append("g")
     //           .call(y);
 
-    // Create circles
+    // Create circle labels
     var circlesGroup = svg.selectAll("Circle")
         .data(data)
         .enter()
@@ -264,6 +264,8 @@ d3.csv("assets/data/data.csv").then(function (data) {
     //////////////////////////////////////////////////////////////////////////////////
     //////////////////// household income vs Obese (%) ends here /////////////////////
     //////////////////////////////////////////////////////////////////////////////////
+
+    // x-axis label animation
 
 
 })
