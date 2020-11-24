@@ -18,5 +18,5 @@ risks and income rate, and so on.
 
 ![dynamic-scatter](images/screenshots4.png)
 
-![dynamic-scatter](images/screenshots5.pngf)
+![dynamic-scatter](images/screenshots5.png)
 
