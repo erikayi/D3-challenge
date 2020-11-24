@@ -10,13 +10,13 @@ risks and income rate, and so on.
 
 ### Screenshots:
 
-!(images/screenshots (1).png)
+![dynamic-scatter](images/screenshots1.png)
 
-!("images/screenshots (2).png")
+![dynamic-scatter](images/screenshots2.png)
 
-!("images/screenshots (3).png")
+![dynamic-scatter](images/screenshots3.png)
 
-!("images/screenshots (4).png")
+![dynamic-scatter](images/screenshots4.png)
 
-!("images/screenshots (5).png")
+![dynamic-scatter](images/screenshots5.pngf)
 
