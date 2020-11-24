@@ -10,13 +10,13 @@ risks and income rate, and so on.
 
 ### Screenshots:
 
-["images/screenshots (1).png"]
+!(images/screenshots (1).png)
 
-["images/screenshots (2).png"]
+!("images/screenshots (2).png")
 
-["images/screenshots (3).png"]
+!("images/screenshots (3).png")
 
-["images/screenshots (4).png"]
+!("images/screenshots (4).png")
 
-["images/screenshots (5).png"]
+!("images/screenshots (5).png")
 
