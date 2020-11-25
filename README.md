@@ -8,6 +8,8 @@ risks and income rate, and so on.
 
 * Brief summaries below the chart for comparing each x and y axis elements.
 
+* Deployment to Github Page: https://erikayi.github.io/D3-challenge/
+
 ### Screenshots:
 
 ![dynamic-scatter](images/screenshots1.png)
