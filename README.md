@@ -6,7 +6,8 @@ risks and income rate, and so on.
 
 * Include state abbreviations in the circles.
 
-* Brief summaries below the chart for comparing each x and y axis elements.
+* Instead of brief summaries on bottom of the website, added buttons for each comparison text box for better user experience. 
+<!-- * Brief summaries below the chart for comparing each x and y axis elements. -->
 
 * Deployment to Github Page: https://erikayi.github.io/D3-challenge/
 
