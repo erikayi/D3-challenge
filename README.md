@@ -12,6 +12,15 @@ risks and income rate, and so on.
 
 ### Screenshots:
 
+### Updated:
+
+![dynamic-scatter](images/updated_whole.jpg)
+![dynamic-scatter](images/updated_health.jpg)
+![dynamic-scatter](images/updated_smoking.jpg)
+![dynamic-scatter](images/updated_obese.jpg)
+
+### Original:
+
 ![dynamic-scatter](images/screenshots1.png)
 
 ![dynamic-scatter](images/screenshots2.png)
