@@ -283,6 +283,7 @@ function makeResponsive() {
                                        xLinearScale, 
                                        yLinearScale, 
                                        chosenXAxis, 
+                                       chosenYAxis
                                        );
 
                 // also, update the tooltips with the new popup descriptions
@@ -291,6 +292,7 @@ function makeResponsive() {
                                         xLinearScale, 
                                         yLinearScale, 
                                         chosenXAxis, 
+                                        chosenYAxis
                                         );
 
                 // update each circle info with new values when it clicked through each labels
